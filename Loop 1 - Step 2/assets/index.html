@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Progress navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--
+        Create Tabs component, that has several tab buttons. Each button toggles active tab content.
+        Add a text input with a button. User can enter any tab index in the input and toggle it by clicking the button.
+        Indexes in this task are not the same as they are used in JS, so by entering 1 - first tab should be shown, not 0.
+        If invalid index is entered - browser must show an alert.
+    -->
+
+    <div class="container">
+        <div class="flex">
+            <input id="input" type="number" placeholder="Enter tab index">
+            <button id="button">Change tab</button>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-nav">
+                <a href="#tab-positive" class="tab-item active">Positive</a>
+                <a href="#tab-negative" class="tab-item">Negative</a>
+                <a href="#tab-neutral" class="tab-item">Neutral</a>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-panel active" id="tab-positive">
+                    Positive content
+                </div>
+                <div class="tab-panel" id="tab-negative">
+                    Negative content
+                </div>
+                <div class="tab-panel" id="tab-neutral">
+                    Neutral content
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

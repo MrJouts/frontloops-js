@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #72b9ff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  width: 500px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Input radio */
+.section-radio {
+  border: 2px solid #72b9ff;
+  border-radius: 4px;
+}
+
+.section-radio label {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.section-radio label.selected {
+  color: white;
+  background-color: #72b9ff;
+}
+
+/* Input select */
+.section-select select {
+  border: 2px solid #72b9ff;
+  padding: 15px 20px;
+  border-radius: 4px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section-radio {
+  display: none;
+}
+
+.section-select {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .section-radio {
+    display: inline-flex;
+  }
+  .section-select {
+    display: none;
+  }
+}

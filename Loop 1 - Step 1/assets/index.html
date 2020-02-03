@@ -1,12 +1,40 @@
 <!doctype html>
 <html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Segmented control</title>
 </head>
+<link rel="stylesheet" href="styles.css">
+
 <body>
     <!--
         Create a segmented control that turns into a <select> for mobile screens.
         They should sync whenever any of them is changed.
     -->
+    <div class="container">
+
+
+        <div class="section-radio">
+            <label for="price" class="selected">Sort by price</label>
+            <input onchange="changeValue(event)" id="price" name="sort" type="radio" value="price" checked>
+            <label for="name">Sort by name</label>
+            <input onchange="changeValue(event)" id="name" name="sort" type="radio" value="name">
+            <label for="relevance">Sort by relevance</label>
+            <input onchange="changeValue(event)" id="relevance" name="sort" type="radio" value="relevance">
+        </div>
+
+        <div class="section-select">
+            <select onchange="changeValue(event)" name="select">
+                <option value="price" selected>Sort by price</option>
+                <option value="name">Sort by name</option>
+                <option value="relevance">Sort by relevance</option>
+            </select>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
